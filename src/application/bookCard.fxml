@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="bookCard_container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openProductPage" prefHeight="365.0" prefWidth="210.0" style="-fx-background-radius: 5; -fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BookCard_Controller">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <ImageView fx:id="bookCover" fitHeight="270.0" fitWidth="190.0" pickOnBounds="true">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <image>
+            <Image url="@../images/broythers%20karamazov.jpg" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="200.0" prefWidth="190.0">
+         <children>
+            <Label fx:id="bookTitle" contentDisplay="CENTER" prefHeight="45.0" prefWidth="190.0" text="The Brothers Karamazov" textAlignment="CENTER" textFill="#0d1321" wrapText="true">
+               <font>
+                  <Font name="Helvetica Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="author" alignment="CENTER" prefHeight="30.0" prefWidth="190.0" text="Fyodor Dostoyevsky" textFill="#0d1321">
+               <font>
+                  <Font name="Bodoni 72 Oldstyle Book Italic" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</VBox>

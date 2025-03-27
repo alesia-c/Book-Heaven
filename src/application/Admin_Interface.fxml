@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #F0ECEB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Admin_Controller">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="200.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lbl_username" layoutX="60.0" layoutY="21.0" prefHeight="30.0" prefWidth="120.0" style="-fx-text-fill: #0d1321;" text="ADMIN" textFill="#0d1321">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="15.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/USER_ICON.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="560.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btn_logout" layoutX="20.0" layoutY="505.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: fda898; -fx-background-radius: 10; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18;" text="Log Out">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="10.0" layoutY="14.0" prefHeight="291.0" prefWidth="180.0" style="-fx-background-color: #f8f4f3; -fx-background-radius: 10;">
+                     <children>
+                        <ImageView fx:id="img_cover" fitHeight="200.0" fitWidth="160.0" layoutX="10.0" layoutY="17.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/default%20cover%20.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_import" layoutX="10.0" layoutY="235.0" mnemonicParsing="false" onAction="#import_image" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #1d4c4f; -fx-background-radius: 10;" text="Import Image" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Button fx:id="btn_clear" layoutX="20.0" layoutY="445.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #1d4c4f; -fx-background-radius: 10;" text="Clear Fields" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="cmb_status" layoutX="20.0" layoutY="327.0" prefHeight="37.0" prefWidth="160.0" promptText="Status" />
+                  <Label fx:id="lbl_id" layoutX="20.0" layoutY="389.0" opacity="0.0" prefHeight="25.0" prefWidth="46.0" text="  " />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="main_container" prefHeight="200.0" prefWidth="900.0">
+         <children>
+            <Pane layoutX="3.0" layoutY="66.0" prefHeight="620.0" prefWidth="890.0" style="-fx-background-radius: 15; -fx-background-color: #F8F4F3;">
+               <children>
+                  <TableView fx:id="Inventory" layoutX="50.0" layoutY="20.0" onMouseClicked="#getSelectedData" prefHeight="400.0" prefWidth="800.0">
+                    <columns>
+                      <TableColumn fx:id="col_id" prefWidth="25.0" text="ID" />
+                      <TableColumn fx:id="col_title" prefWidth="220.0" text="Title" />
+                        <TableColumn fx:id="col_author" prefWidth="195.0" text="Author" />
+                        <TableColumn fx:id="col_year" prefWidth="70.0" text="Year" />
+                        <TableColumn fx:id="cl_pages" prefWidth="70.0" text="Pages" />
+                        <TableColumn fx:id="col_copies" prefWidth="70.0" text="Copies" />
+                        <TableColumn fx:id="col_price" prefWidth="70.0" text="Price" />
+                        <TableColumn fx:id="col_status" text="Status" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="txt_title" layoutX="130.0" layoutY="460.0" promptText="Enter the book title" />
+                  <TextField fx:id="txt_author" layoutX="130.0" layoutY="520.0" promptText="Enter the author's name" />
+                  <TextField fx:id="txt_copies" layoutX="405.0" layoutY="520.0" promptText="Copies in stock" />
+                  <TextField fx:id="txt_year" layoutX="130.0" layoutY="580.0" promptText="YYYY" />
+                  <TextField fx:id="txt_pages" layoutX="405.0" layoutY="460.0" promptText="Enter the number of pages" />
+                  <Label layoutX="50.0" layoutY="460.0" prefHeight="20.0" prefWidth="60.0" text="Title" textFill="#0d1321">
+                     <font>
+                        <Font name="Helvetica" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="580.0" prefHeight="20.0" prefWidth="60.0" text="Year" textFill="#0d1321">
+                     <font>
+                        <Font name="Helvetica" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="520.0" prefHeight="20.0" prefWidth="60.0" text="Author" textFill="#0d1321">
+                     <font>
+                        <Font name="Helvetica" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="335.0" layoutY="460.0" prefHeight="20.0" prefWidth="60.0" text="Pages" textFill="#0d1321">
+                     <font>
+                        <Font name="Helvetica" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="335.0" layoutY="520.0" prefHeight="25.0" prefWidth="66.0" text="Copies" textFill="#0d1321">
+                     <font>
+                        <Font name="Helvetica" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="335.0" layoutY="580.0" prefHeight="20.0" prefWidth="60.0" text="Price" textFill="#0d1321">
+                     <font>
+                        <Font name="Helvetica" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_price" layoutX="405.0" layoutY="580.0" promptText="00.00" />
+                  <Button fx:id="btn_add" layoutX="620.0" layoutY="460.0" mnemonicParsing="false" onAction="#add_book" prefHeight="25.0" prefWidth="230.0" style="-fx-background-color: #1d4c4f;" text="Add New Book" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_remove" layoutX="620.0" layoutY="520.0" mnemonicParsing="false" onAction="#remove_book" prefHeight="25.0" prefWidth="230.0" style="-fx-background-color: #1d4c4f;" text="Remove Book" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_mod" layoutX="620.0" layoutY="580.0" mnemonicParsing="false" onAction="#modify_book" prefHeight="25.0" prefWidth="230.0" style="-fx-background-color: #1d4c4f;" text="Modify Book" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <TextField fx:id="txt_search" layoutX="9.0" layoutY="20.0" prefHeight="30.0" prefWidth="527.0" promptText="Enter book name" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="btn_search" layoutX="509.0" layoutY="20.0" mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: #1D4C4F; -fx-background-radius: 10;">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/SEARCH_ICON.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
