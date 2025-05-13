@@ -1,0 +1,58 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#pane_usrname:hover{
+	-fx-background-color: #d8d4d4;
+}
+
+#pane_home:hover{
+	-fx-background-color: #d8d4d4;
+}
+
+#pane_shop:hover{
+	-fx-background-color: #d8d4d4;
+}
+
+#pane_info:hover{
+	-fx-background-color: #d8d4d4;
+}
+
+#btn_login:hover{
+	-fx-background-color: #CA867A; 
+	-fx-text-fill: white; 
+	-fx-font-family: Helvetica;
+	-fx-background-radius: 10; 
+	-fx-font-weight: bold; 
+	-fx-font-size: 20;
+}
+
+#btn_logout:hover{
+	-fx-background-color: #345e61; 
+	-fx-text-fill: white; 
+	-fx-font-family: Helvetica;
+	-fx-background-radius: 10; 
+	-fx-font-weight: bold; 
+	-fx-font-size: 18;
+}
+
+#btn_signin:hover{
+	-fx-background-color: #345e61; 
+	-fx-text-fill: white; 
+	-fx-font-family: Helvetica;
+	-fx-background-radius: 10; 
+	-fx-font-weight: bold; 
+	-fx-font-size: 20;
+}
+
+#btn_shop:hover{
+	-fx-background-color: #345e61; 
+	-fx-text-fill: white;
+	-fx-font-family: Helvetica; 
+	-fx-background-radius: 10; 
+	-fx-font-weight: bold; 
+	-fx-font-size: 20;
+}
+
+#btn_search:hover{
+	-fx-background-color: #345e61; 
+	-fx-background-radius: 10;
+}
